@@ -19,8 +19,14 @@ namespace ConsoleApp1
             Console.WriteLine("Foo_1");
             Foo_1(num);
             Thread.Sleep(1000);
+
+            Console.WriteLine("recursive functions");
             Console.WriteLine("Foo_2");
             Foo_2(num);
+
+            Console.WriteLine("Foo_3");
+            Foo_3(num);
+
 
             Console.ReadKey();
         }
@@ -46,7 +52,6 @@ namespace ConsoleApp1
         static int Foo_2(int num)
         {
             Thread.Sleep(200);
-            Console.WriteLine("recursive function");
             Console.WriteLine($"Your num is: {num}");
             if (num == 1)
             {
@@ -55,6 +60,20 @@ namespace ConsoleApp1
                 
             }
             return Foo_2(num-1);
+        }
+        static void Foo_3(int num)
+        {
+
+
+            if (num == 1)
+            {
+                Console.WriteLine($"Your num is: {num}");
+                return;
+
+            }
+            Foo_3(num - 1);
+            Thread.Sleep(200);
+            Console.WriteLine($"Your num is: {num}");
         }
     }
 }
