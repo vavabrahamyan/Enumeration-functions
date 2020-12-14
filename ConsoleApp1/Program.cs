@@ -5,30 +5,66 @@ namespace ConsoleApp1
 {
     class Program
     {
+        private static int[] nums = new int[1000];
         static void Main(string[] args)
         {
-            Console.WriteLine("Pleas set number");
+            Console.WriteLine("pleas set number");
             int num = Int32.Parse(Console.ReadLine());
-            Thread.Sleep(1000);
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("------Enumeration functions------- ");
-            Console.WriteLine("Foo_0");
-            Foo_0(num);
-            Thread.Sleep(1000);
-            Console.WriteLine("Foo_1");
-            Foo_1(num);
-            Thread.Sleep(1000);
 
-            Console.WriteLine("recursive functions");
-            Console.WriteLine("Foo_2");
-            Foo_2(num);
 
-            Console.WriteLine("Foo_3");
-            Foo_3(num);
+            //Thread.Sleep(1000);
+            //Console.Clear();
+            //Console.ForegroundColor = ConsoleColor.Yellow;
+            //Console.WriteLine("------Enumeration functions------- ");
+            //Console.WriteLine("Foo_0");
+            //Foo_0(num);
+            //Thread.Sleep(1000);
+            //Console.WriteLine("Foo_1");
+            //Foo_1(num);
+            //Thread.Sleep(1000);
+
+            //Console.WriteLine("recursive functions");
+            //Console.WriteLine("Foo_2");
+            //Foo_2(num);
+
+            //Console.WriteLine("Foo_3");
+            //Foo_3(num);
+
+            Console.WriteLine(   $"Your {num}th is :{Fib(num)}");
+            Console.WriteLine();
 
 
             Console.ReadKey();
+        }
+
+        static int Fib(int num)
+        {
+            if(num < 0)
+
+            {
+                Console.WriteLine("Num is out of range :_('_')_:");
+                return 0;
+            }
+            else if(num == 0)
+            {
+                return 1;
+            }
+            else if(num == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                if (nums[num] != 0)
+                {
+                    return (nums[num]);
+                }
+                else
+                {
+                    nums[num] = (Fib(num - 2) + Fib(num - 1));
+                    return nums[num];
+                }
+            }
         }
 
         static void Foo_0(int num)
