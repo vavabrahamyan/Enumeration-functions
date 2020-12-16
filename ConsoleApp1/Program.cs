@@ -8,8 +8,10 @@ namespace ConsoleApp1
         private static int[] nums = new int[1000];
         static void Main(string[] args)
         {
-            Console.WriteLine("pleas set number");
-            int num = Int32.Parse(Console.ReadLine());
+            //Console.WriteLine("pleas set number");
+            //int num = Int32.Parse(Console.ReadLine());
+
+            
 
 
             //Thread.Sleep(1000);
@@ -30,8 +32,8 @@ namespace ConsoleApp1
             //Console.WriteLine("Foo_3");
             //Foo_3(num);
 
-            Console.WriteLine(   $"Your {num}th is :{Fib(num)}");
-            Console.WriteLine();
+            //Console.WriteLine(   $"Your {num}th is :{Fib(num)}");
+            //Console.WriteLine();
 
 
             Console.ReadKey();
