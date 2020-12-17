@@ -11,8 +11,8 @@ namespace ConsoleApp1
             //Console.WriteLine("pleas set number");
             //int num = Int32.Parse(Console.ReadLine());
 
-            
 
+            Console.WriteLine($"Your number is {Fib(8)}");
 
             //Thread.Sleep(1000);
             //Console.Clear();
